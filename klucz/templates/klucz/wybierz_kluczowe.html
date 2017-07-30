@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kie_kluczowe</title>
+</head>
+<body>
+<h1>Wybór kierunków kluczowych</h1>
+    <form method="POST" class="question-form">{% csrf_token %}
+    <p>Wybierz oddział >>> {{form.branch}}</p>
+    <ul>
+    {% for choice in form.choice_text.field.choices %}
+      <li>
+        <input type="checkbox" name="choice_text" value="{{form.choice_text}}"
+          {% ifequal form.choice_text.data forloop.counter 6 %}>
+    </ul>
+        <ul>{% endifequal %}
+
+          {% endifequal %}/>
+        <label for="">{{form.choice_text}}</label>
+     </li>
+    {% endfor %}
+    </ul>
+
+
+
+
+
+        <button type="submit" class="save btn btn-default">Wyślij</button>
+    </form>
+</body>
+</html>

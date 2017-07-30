@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kie_kluczowe</title>
+</head>
+<body>
+<h1>Wybór kierunków kluczowych</h1>
+    <form method="POST" class="question-form">{% csrf_token %}
+        {{ form.as_p }}
+        <p>Wybrano {{ form.number_courses}} kierunki/ów kluczowe/wych</p>
+        <button type="submit" class="save btn btn-default" name="save_odd_form">Wyślij</button>
+        <button type="reset" class="save btn btn-default">Wyczyść formularz</button>
+        <button type="submit" class="save btn btn-default" name="export_odd_pdf">Eksportuj pdf</button>
+    </form>
+</body>
+</html>

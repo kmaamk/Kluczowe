@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %} <!--zabezpieczenie przy formularzach standardowe-->
+	<label for="username">Nazwa użytkownika: </label>  <!--etykieta do pola nazwy użytkownika -->
+	<input id="username" type="text" name="username" value="">  <!--pole nazwy użytkownika-->
+	<label for="password">Hasło: </label>
+	<input id="password" type="text" name="password" value="">
+	<input type="submit" value="Zaloguj" class btn btn-primary>  <!--przycisk logowania -->
+</form>
+</body>
+</html>

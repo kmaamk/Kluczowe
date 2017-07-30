@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potwierdzenie</title>
+</head>
+<body>
+<p>Dziękujemy za wypełnienie formularza. Twój wybór został przesłany.</p>
+<form method="POST" class="question-form">{% csrf_token %}
+{% for label in form|selected_labels:"choice_text" %}
+    {{ label }}
+{% endfor %}
+</form>
+
+
+
+
+
+</body>
+</html>
